@@ -67,10 +67,12 @@
                   <Expression xsi:type="Annotation">
                     <Text><![CDATA[Disable pulse mode on all output channels]]></Text>
                   </Expression>
-                  <Expression xsi:type="p1:CreateMessage">
+                  <Expression xsi:type="harp:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
-                    <harp:Payload xsi:type="p1:CreateOutputPulsePayload">
-                      <p1:OutputPulse>None</p1:OutputPulse>
+                    <harp:Payload xsi:type="harp:CreateMessagePayload">
+                      <harp:Address>76</harp:Address>
+                      <harp:PayloadType>U16</harp:PayloadType>
+                      <harp:Value>0</harp:Value>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="Combinator">
