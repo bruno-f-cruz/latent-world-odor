@@ -559,7 +559,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="TimeSpanProperty">
-                <Value>PT0.01S</Value>
+                <Value>PT0.2S</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -575,7 +575,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="TimeSpanProperty">
-                <Value>PT0.2S</Value>
+                <Value>PT0.01S</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
