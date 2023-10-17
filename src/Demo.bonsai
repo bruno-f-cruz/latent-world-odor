@@ -853,7 +853,7 @@
               </Operand>
             </Expression>
             <Expression xsi:type="scr:ExpressionTransform">
-              <scr:Expression>it &gt; 3 ? 1 : it</scr:Expression>
+              <scr:Expression>it &gt; 2 ? 0 : it</scr:Expression>
             </Expression>
             <Expression xsi:type="MulticastSubject">
               <Name>CurrentOdor</Name>
