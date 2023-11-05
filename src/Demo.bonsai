@@ -738,6 +738,34 @@
               <io:IncludeHeader>false</io:IncludeHeader>
               <io:Selector>Seconds,Value</io:Selector>
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Events</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="harp:GroupByRegister" />
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>LoggingRootPath</Name>
+            </Expression>
+            <Expression xsi:type="Format">
+              <Format>{0}/Behavior.harp</Format>
+              <Selector>it</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="FileName" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="harp:MessageWriter">
+                <harp:FileName>.bin</harp:FileName>
+                <harp:Suffix>None</harp:Suffix>
+                <harp:Buffered>true</harp:Buffered>
+                <harp:Overwrite>false</harp:Overwrite>
+                <harp:FilterType>Include</harp:FilterType>
+                <harp:MessageType xsi:nil="true" />
+              </Combinator>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -764,6 +792,11 @@
             <Edge From="23" To="24" Label="Source1" />
             <Edge From="24" To="25" Label="Source1" />
             <Edge From="25" To="26" Label="Source2" />
+            <Edge From="27" To="28" Label="Source1" />
+            <Edge From="28" To="32" Label="Source1" />
+            <Edge From="29" To="30" Label="Source1" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
